@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pooja Facility Management Services Pvt Ltd | Security, Housekeeping &amp; Facility Management</title>
+<meta name="description" content="Pooja Facility Management Services Pvt Ltd — PSARA-licensed, ISO 9001:2015 certified provider of security, housekeeping and facility management services since 2008. 2135+ trained staff, 100+ enterprise clients across Pune and Maharashtra.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0d2647;
+    --navy-2:#123763;
+    --navy-3:#0a1d38;
+    --green:#5a9e2f;
+    --green-2:#75b647;
+    --teal:#2f8fb0;
+    --bg:#f6f8fa;
+    --card:#ffffff;
+    --text:#1c2530;
+    --muted:#5b6472;
+    --line:#e6eaef;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(13,38,71,0.08);
+    --shadow-lg:0 20px 50px rgba(13,38,71,0.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;font-weight:700;color:var(--navy);line-height:1.25;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--green);background:rgba(90,158,47,0.1);
+    padding:7px 16px;border-radius:999px;margin-bottom:18px;
+  }
+  .section-head{max-width:680px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px;}
+  .section-head p{color:var(--muted);font-size:16.5px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 30px;border-radius:10px;font-weight:600;font-size:15px;
+    cursor:pointer;border:none;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(90,158,47,0.35);}
+  .btn-primary:hover{background:var(--green-2);transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.5);}
+  .btn-outline:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{background:var(--navy-2);transform:translateY(-2px);}
+
+  /* ===== HEADER ===== */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    background:rgba(13,38,71,0.0);
+    transition:background .3s ease, box-shadow .3s ease, padding .3s ease;
+    padding:18px 0;
+  }
+  header.scrolled{background:rgba(13,38,71,0.97);box-shadow:0 6px 24px rgba(0,0,0,0.18);padding:10px 0;backdrop-filter:blur(6px);}
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{height:40px;width:auto;filter:brightness(0) invert(1);}
+  .brand-text{color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;line-height:1.2;}
+  .brand-text span{display:block;font-weight:400;font-size:10.5px;letter-spacing:0.04em;opacity:0.75;text-transform:uppercase;}
+  nav ul{display:flex;gap:34px;}
+  nav a{color:#fff;font-size:14.5px;font-weight:500;opacity:0.88;transition:opacity .2s;position:relative;}
+  nav a:hover{opacity:1;}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  .nav-phone{color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;gap:7px;}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;}
+  .mobile-menu{
+    display:none;position:fixed;top:0;right:0;bottom:0;width:78%;max-width:320px;
+    background:var(--navy-3);z-index:1002;padding:100px 32px 32px;flex-direction:column;gap:26px;
+    box-shadow:-20px 0 50px rgba(0,0,0,0.3); transform:translateX(100%); transition:transform .35s ease;
+  }
+  .mobile-menu.open{transform:translateX(0);}
+  .mobile-menu a{color:#fff;font-size:17px;font-weight:500;}
+  .menu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1001;}
+  .menu-overlay.open{display:block;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;background:linear-gradient(135deg,var(--navy-3) 0%, var(--navy) 55%, var(--navy-2) 100%);
+    padding:170px 0 110px;overflow:hidden;
+  }
+  .hero::before{
+    content:'';position:absolute;top:-120px;right:-160px;width:520px;height:520px;
+    background:radial-gradient(circle,rgba(90,158,47,0.28),transparent 70%);border-radius:50%;
+  }
+  .hero::after{
+    content:'';position:absolute;bottom:-200px;left:-160px;width:480px;height:480px;
+    background:radial-gradient(circle,rgba(47,143,176,0.22),transparent 70%);border-radius:50%;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;position:relative;z-index:2;}
+  .hero-copy .eyebrow{background:rgba(255,255,255,0.12);color:#bfe3a3;}
+  .hero-copy h1{color:#fff;font-size:clamp(34px,4.6vw,54px);margin-bottom:22px;}
+  .hero-copy h1 em{color:var(--green-2);font-style:normal;}
+  .hero-copy p{color:rgba(255,255,255,0.78);font-size:18px;max-width:520px;margin-bottom:34px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:46px;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:560px;}
+  .hero-stats div{border-left:2px solid rgba(255,255,255,0.18);padding-left:14px;}
+  .hero-stats strong{display:block;color:#fff;font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;}
+  .hero-stats span{color:rgba(255,255,255,0.62);font-size:12.5px;}
+  .hero-media{position:relative;display:flex;justify-content:center;}
+  .hero-media .frame{
+    position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);
+    border:6px solid rgba(255,255,255,0.08);max-width:340px;
+  }
+  .hero-media .frame img{width:100%;height:520px;object-fit:cover;}
+  .hero-badge{
+    position:absolute;bottom:-22px;left:-30px;background:#fff;border-radius:14px;padding:16px 20px;
+    box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:12px;max-width:230px;
+  }
+  .hero-badge .ic{width:42px;height:42px;border-radius:10px;background:rgba(90,158,47,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .hero-badge strong{display:block;font-size:14px;color:var(--navy);font-family:'Poppins',sans-serif;}
+  .hero-badge p{font-size:12px;color:var(--muted);margin:0;}
+
+  /* ===== TRUST STRIP ===== */
+  .trust-strip{background:var(--navy-3);padding:22px 0;}
+  .trust-strip .container{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .trust-chip{
+    display:flex;align-items:center;gap:9px;color:#fff;font-size:13.5px;font-weight:600;
+    background:rgba(255,255,255,0.06);padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,0.1);
+  }
+  .trust-chip svg{flex-shrink:0;}
+
+  /* ===== REVEAL ===== */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ===== ABOUT ===== */
+  .about{background:var(--card);}
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
+  .about-media{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+  .about-media img{width:100%;height:100%;object-fit:cover;}
+  .about-copy p{color:var(--muted);margin-bottom:18px;font-size:16px;}
+  .founder-quote{
+    margin-top:26px;background:var(--bg);border-left:4px solid var(--green);padding:20px 24px;border-radius:0 12px 12px 0;
+  }
+  .founder-quote p{font-style:italic;color:var(--navy);font-size:15.5px;margin-bottom:8px;}
+  .founder-quote span{font-size:13px;color:var(--muted);font-weight:600;}
+  .values-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px;}
+  .value-pill{text-align:center;padding:18px 8px;background:var(--bg);border-radius:12px;}
+  .value-pill .ic{width:44px;height:44px;margin:0 auto 10px;border-radius:12px;background:rgba(13,38,71,0.06);display:flex;align-items:center;justify-content:center;}
+  .value-pill strong{display:block;font-size:13.5px;color:var(--navy);font-family:'Poppins',sans-serif;}
+
+  /* ===== SERVICES ===== */
+  .services{background:var(--bg);}
+  .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .service-card{
+    background:var(--card);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--shadow);
+    transition:transform .25s ease, box-shadow .25s ease;border:1px solid var(--line);
+  }
+  .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+  .service-card .ic{
+    width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  }
+  .service-card h3{font-size:17px;margin-bottom:8px;}
+  .service-card p{font-size:14px;color:var(--muted);}
+  .ic-navy{background:rgba(13,38,71,0.08);}
+  .ic-green{background:rgba(90,158,47,0.12);}
+  .ic-teal{background:rgba(47,143,176,0.12);}
+
+  /* ===== SPOTLIGHT (housekeeping / security) ===== */
+  .spotlight{background:var(--card);}
+  .spotlight-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:110px;}
+  .spotlight-row:last-child{margin-bottom:0;}
+  .spotlight-row.reverse .sp-media{order:2;}
+  .spotlight-row.reverse .sp-copy{order:1;}
+  .sp-media{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative;}
+  .sp-media img{width:100%;height:380px;object-fit:cover;}
+  .sp-copy h3{font-size:clamp(24px,3vw,30px);margin-bottom:16px;}
+  .sp-copy p{color:var(--muted);margin-bottom:20px;}
+  .sp-list{display:grid;gap:12px;}
+  .sp-list li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--text);}
+  .sp-list li svg{flex-shrink:0;margin-top:3px;}
+  .sp-tag{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;text-transform:uppercase;
+    letter-spacing:0.06em;color:var(--teal);background:rgba(47,143,176,0.1);padding:6px 14px;border-radius:999px;margin-bottom:16px;
+  }
+
+  /* ===== SECTORS ===== */
+  .sectors{background:var(--navy-3);}
+  .sectors .section-head h2, .sectors .section-head p{color:#fff;}
+  .sectors .section-head p{color:rgba(255,255,255,0.65);}
+  .sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .sector-card{
+    background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;
+    padding:22px 16px;text-align:center;transition:background .2s ease, transform .2s ease;
+  }
+  .sector-card:hover{background:rgba(255,255,255,0.1);transform:translateY(-4px);}
+  .sector-card .ic{width:40px;height:40px;margin:0 auto 12px;border-radius:10px;background:rgba(90,158,47,0.18);display:flex;align-items:center;justify-content:center;}
+  .sector-card span{color:#fff;font-size:13.5px;font-weight:500;}
+
+  /* ===== WHY US ===== */
+  .why{background:var(--bg);}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .why-card{background:var(--card);border-radius:var(--radius);padding:26px;border:1px solid var(--line);}
+  .why-card .num{font-family:'Poppins',sans-serif;font-weight:800;font-size:26px;color:rgba(13,38,71,0.14);margin-bottom:8px;}
+  .why-card h4{font-size:15.5px;margin-bottom:8px;}
+  .why-card p{font-size:13.8px;color:var(--muted);}
+
+  /* ===== LEADERSHIP ===== */
+  .leadership{background:var(--card);}
+  .lead-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .lead-card{background:var(--bg);border-radius:var(--radius);padding:28px 24px;border:1px solid var(--line);}
+  .lead-avatar{
+    width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;
+    justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;margin-bottom:16px;
+  }
+  .lead-card h4{font-size:16px;margin-bottom:2px;}
+  .lead-card .role{color:var(--green);font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:12px;display:block;}
+  .lead-card p{font-size:14px;color:var(--muted);}
+
+  /* ===== CLIENTS ===== */
+  .clients{background:var(--bg);}
+  .client-chip-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .client-chip{
+    background:var(--card);border:1px solid var(--line);padding:12px 22px;border-radius:999px;
+    font-size:14px;font-weight:600;color:var(--navy);box-shadow:0 4px 12px rgba(13,38,71,0.05);
+  }
+
+  /* ===== CTA BAND ===== */
+  .cta-band{
+    background:linear-gradient(120deg,var(--green) 0%, #4a8524 100%);padding:64px 0;
+  }
+  .cta-band .container{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+  .cta-band h3{color:#fff;font-size:clamp(22px,3vw,28px);max-width:520px;}
+  .cta-band p{color:rgba(255,255,255,0.85);margin-top:6px;}
+  .cta-band .btn-navy{background:var(--navy-3);}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--card);}
+  .contact-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:56px;}
+  .contact-info-card{background:var(--navy-3);border-radius:var(--radius);padding:38px 32px;color:#fff;}
+  .contact-info-card h3{color:#fff;font-size:22px;margin-bottom:8px;}
+  .contact-info-card p{color:rgba(255,255,255,0.65);font-size:14.5px;margin-bottom:28px;}
+  .contact-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px;}
+  .contact-row .ic{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-row strong{display:block;font-size:14.5px;margin-bottom:2px;}
+  .contact-row span, .contact-row a{font-size:13.5px;color:rgba(255,255,255,0.68);}
+  .contact-row a:hover{color:#fff;}
+  .cert-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.12);}
+  .cert-row span{font-size:11.5px;background:rgba(255,255,255,0.08);padding:6px 12px;border-radius:999px;color:rgba(255,255,255,0.75);}
+
+  form{background:var(--bg);border-radius:var(--radius);padding:36px;border:1px solid var(--line);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  .form-group{display:flex;flex-direction:column;gap:7px;}
+  .form-group.full{grid-column:1/-1;}
+  label{font-size:13px;font-weight:600;color:var(--navy);}
+  input, select, textarea{
+    padding:13px 14px;border-radius:9px;border:1px solid var(--line);font-family:'Inter',sans-serif;font-size:14.5px;
+    background:#fff;color:var(--text);transition:border-color .2s;
+  }
+  input:focus, select:focus, textarea:focus{outline:none;border-color:var(--teal);}
+  textarea{resize:vertical;min-height:100px;}
+  .form-note{font-size:12.5px;color:var(--muted);margin-top:12px;}
+  #formStatus{margin-top:14px;font-size:14px;font-weight:600;display:none;}
+  #formStatus.show{display:block;color:var(--green);}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--navy-3);color:rgba(255,255,255,0.7);padding:64px 0 26px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;margin-bottom:48px;}
+  .footer-brand img{height:38px;filter:brightness(0) invert(1);margin-bottom:16px;}
+  .footer-brand p{font-size:13.5px;line-height:1.7;max-width:280px;}
+  footer h4{color:#fff;font-size:14.5px;margin-bottom:18px;font-family:'Poppins',sans-serif;}
+  footer ul li{margin-bottom:11px;font-size:13.8px;}
+  footer ul a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);padding-top:22px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;font-size:12.8px;
+  }
+  .socials{display:flex;gap:10px;}
+  .socials a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;}
+  .socials a:hover{background:var(--green);}
+
+  /* ===== FLOATING CALL BUTTON ===== */
+  .float-cta{
+    position:fixed;bottom:24px;right:24px;z-index:900;display:flex;flex-direction:column;gap:12px;align-items:flex-end;
+  }
+  .float-btn{
+    width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);color:#fff;
+  }
+  .float-btn.call{background:var(--green);}
+  .float-btn.wa{background:#25D366;}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-media{margin-top:20px;}
+    .about-grid, .spotlight-row, .spotlight-row.reverse, .contact-grid{grid-template-columns:1fr;}
+    .spotlight-row.reverse .sp-media, .spotlight-row.reverse .sp-copy{order:0;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+    .sector-grid{grid-template-columns:repeat(3,1fr);}
+    .why-grid, .lead-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    nav, .nav-phone{display:none;}
+    .burger{display:flex;}
+    .mobile-menu{display:flex;}
+  }
+  @media (max-width:640px){
+    section{padding:64px 0;}
+    .hero{padding:130px 0 70px;}
+    .hero-stats{grid-template-columns:repeat(2,1fr);}
+    .service-grid, .sector-grid, .why-grid, .lead-grid, .footer-grid{grid-template-columns:1fr 1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .cta-band .container{flex-direction:column;text-align:center;}
+    .footer-bottom{flex-direction:column;text-align:center;}
+    .hero-badge{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="#home" class="brand">
+      <img src="assets/logo.png" alt="Pooja Facility Management Services logo">
+      <div class="brand-text">POOJA FMS<span>Facility Management Services</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#why-us">Why us</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+918888851519" class="nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        88888 51519
+      </a>
+      <a href="#contact" class="btn btn-primary" style="padding:12px 22px;font-size:14px;">Get a quote</a>
+      <div class="burger" id="burgerBtn"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#sectors">Sectors</a>
+  <a href="#why-us">Why us</a>
+  <a href="#leadership">Leadership</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+918888851519" class="btn btn-primary" style="margin-top:10px;">Call 88888 51519</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">PSARA licensed &middot; ISO 9001:2015 certified &middot; Since 2008</div>
+      <h1>Protecting what matters most, <em>every single day.</em></h1>
+      <p>Pooja Facility Management Services Pvt Ltd delivers trusted security, housekeeping and facility management solutions across Pune and Maharashtra — backed by 2,135+ trained professionals and 16 years of ground-level discipline.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a proposal</a>
+        <a href="tel:+918888851519" class="btn btn-outline">Call 88888 51519</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong data-count="2008">0</strong><span>Established</span></div>
+        <div><strong data-count="2135" data-suffix="+">0</strong><span>Trained staff</span></div>
+        <div><strong data-count="100" data-suffix="+">0</strong><span>Enterprise clients</span></div>
+        <div><strong data-count="24" data-suffix="/7">0</strong><span>QRT response</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="frame"><img src="assets/hero-guards.jpg" alt="Pooja Facility Management security guards on duty"></div>
+      <div class="hero-badge">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+        <div><strong>PSARA SR.NO. 11/2012</strong><p>Fully licensed &amp; compliant</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#75b647" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> ISO 9001:2015 certified</div>
+    <div class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#75b647" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> PSARA licensed</div>
+    <div class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#75b647" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> MSME registered</div>
+    <div class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#75b647" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> Startup India recognized</div>
+    <div class="trust-chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#75b647" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg> 24/7 control room &amp; QRT</div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <img src="assets/team-leadership.jpg" alt="Pooja Facility Management leadership and site team">
+    </div>
+    <div class="about-copy reveal">
+      <div class="eyebrow" style="background:rgba(47,143,176,0.1);color:var(--teal);">About us</div>
+      <h2>Built on discipline. Run with integrity.</h2>
+      <p>Pooja Facility Management Services Pvt. Ltd. is a trusted facility management company specializing in security services, housekeeping, and manpower solutions. With a workforce of 2,135+ trained professionals, we deliver customized and dependable services that enable our clients to maintain safe, clean, and well-managed premises.</p>
+      <p>What truly sets us apart is the leadership behind the organization — practically driven, disciplined, and people-focused, from the ground up.</p>
+      <div class="founder-quote">
+        <p>"Our Managing Director began his career as a security guard, gaining 8 years of hands-on field experience, and today brings over 35 years of experience in the security industry."</p>
+        <span>— Leadership philosophy, Pooja Facility Management Services</span>
+      </div>
+      <div class="values-row">
+        <div class="value-pill">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+          <strong>Trust</strong>
+        </div>
+        <div class="value-pill">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 14l-3 8 6-3 6 3-3-8"/></svg></div>
+          <strong>Quality</strong>
+        </div>
+        <div class="value-pill">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <strong>Teamwork</strong>
+        </div>
+        <div class="value-pill">
+          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-8 7-13 3 5 7 8 7 13a7 7 0 0 1-7 7z"/></svg></div>
+          <strong>Sustainability</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">What we do</div>
+      <h2>Complete facility management, under one roof</h2>
+      <p>From frontline security to daily housekeeping and specialist trades, our services are designed to keep your premises safe, clean and fully operational.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <div class="ic ic-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div>
+        <h3>Security services</h3>
+        <p>Trained guards, QRT emergency response and 24/7 site protection.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Housekeeping</h3>
+        <p>Daily and deep cleaning for residential, commercial and high-rise sites.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f8fb0" stroke-width="2"><path d="M14 19.5A2.5 2.5 0 0 1 11.5 22 2.5 2.5 0 0 1 9 19.5V17h5zM9 17v-2a3 3 0 1 1 6 0v2"/><path d="M17 8a5 5 0 1 0-10 0c0 2 1 3 1 5h8c0-2 1-3 1-5z"/></svg></div>
+        <h3>Bouncer services</h3>
+        <p>Trained personnel for events, venues and high-footfall gatherings.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3>Facility management</h3>
+        <p>On-site facility managers and accountants for end-to-end site upkeep.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2"><path d="M3 12l2-2 4 4 8-8 2 2"/><path d="M3 20h18"/></svg></div>
+        <h3>Waste management &amp; OWC</h3>
+        <p>Door-to-door collection, segregation and organic waste converter operations.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f8fb0" stroke-width="2"><path d="M18 3l3 3-9 9-4 1 1-4 9-9z"/><path d="M13 6l5 5"/></svg></div>
+        <h3>Electrical services</h3>
+        <p>Qualified electricians for maintenance, repair and safety upkeep.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-navy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2"><path d="M12 2C9 6 5 9 5 13a7 7 0 0014 0c0-4-4-7-7-11z"/></svg></div>
+        <h3>Plumbing services</h3>
+        <p>Preventive and on-call plumbing support across serviced sites.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="ic ic-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2"><path d="M12 22V12M12 12C7 12 4 9 4 5c4 0 8 2 8 7zM12 12c5 0 8-3 8-7-4 0-8 2-8 7z"/></svg></div>
+        <h3>Gardening &amp; landscaping</h3>
+        <p>Grounds, garden and landscape maintenance for a well-kept exterior.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPOTLIGHT: HOUSEKEEPING + SECURITY/QRT ===== -->
+<section class="spotlight">
+  <div class="container">
+    <div class="spotlight-row">
+      <div class="sp-media reveal"><img src="assets/cleaning-action.jpg" alt="Pooja Facility Management housekeeping staff cleaning a lobby"></div>
+      <div class="sp-copy reveal">
+        <span class="sp-tag">Housekeeping</span>
+        <h3>Clean, safe and well-maintained — every single day</h3>
+        <p>Our housekeeping teams follow structured daily, weekly and monthly cleaning cycles, using colour-coded equipment to prevent cross-contamination and eco-friendly products wherever possible.</p>
+        <ul class="sp-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Daily, weekly &amp; deep cleaning cycles</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> High-rise facade, lift &amp; stairwell cleaning</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Waste segregation &amp; OWC operations</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Trained, uniformed &amp; hygiene-certified staff</li>
+        </ul>
+      </div>
+    </div>
+    <div class="spotlight-row reverse">
+      <div class="sp-media reveal"><img src="assets/qrt-vehicle.jpg" alt="Pooja Facility Management Quick Response Team and patrol vehicle"></div>
+      <div class="sp-copy reveal">
+        <span class="sp-tag" style="color:var(--navy);background:rgba(13,38,71,0.08);">Security &amp; QRT</span>
+        <h3>A dedicated Quick Response Team, on call around the clock</h3>
+        <p>Our QRT is trained to handle fire incidents, medical emergencies, security threats and natural disasters — ensuring immediate action and rapid resolution whenever it matters most.</p>
+        <ul class="sp-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Rapid deployment within minutes</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Crisis handling, first aid &amp; conflict management</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> 24/7 control room availability</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0d2647" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Coordination with local authorities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTORS ===== -->
+<section class="sectors" id="sectors">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="background:rgba(90,158,47,0.16);color:#9ed36f;">Who we serve</div>
+      <h2>Trusted across every sector that matters</h2>
+      <p>From residential societies to government institutions, our teams are deployed wherever safety and cleanliness are non-negotiable.</p>
+    </div>
+    <div class="sector-grid">
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg></div><span>Residential complexes</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><rect x="4" y="3" width="16" height="18"/><path d="M9 21v-4h6v4M9 7h1M14 7h1M9 11h1M14 11h1"/></svg></div><span>IT parks &amp; business centers</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M3 9l9-6 9 6v11H3z"/><path d="M9 22V12h6v10"/></svg></div><span>Malls &amp; retail outlets</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M12 21s-7-5-7-11a5 5 0 0110 0 5 5 0 0110 0c0 6-7 11-7 11"/><path d="M9 10h6M12 7v6"/></svg></div><span>Hospitals &amp; healthcare</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><span>Educational institutions</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div><span>Hotels &amp; resorts</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><rect x="3" y="7" width="18" height="13"/><path d="M8 7V4h8v3"/></svg></div><span>Industrial &amp; warehouses</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><rect x="3" y="10" width="18" height="10"/><path d="M12 3l9 7H3z"/></svg></div><span>Banks &amp; financial institutions</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M3 21h18M6 21V8l6-5 6 5v13"/></svg></div><span>Construction &amp; infrastructure</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M4 22c0-4 4-6 8-6s8 2 8 6"/></svg></div><span>Events &amp; public gatherings</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></div><span>Government &amp; semi-govt</span></div>
+      <div class="sector-card reveal"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ed36f" stroke-width="2"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg></div><span>Corporate offices</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINING (image support) ===== -->
+<section class="spotlight" style="padding-bottom:0;">
+  <div class="container">
+    <div class="spotlight-row">
+      <div class="sp-media reveal"><img src="assets/fire-training.jpg" alt="Pooja Facility Management fire-fighting training drill"></div>
+      <div class="sp-copy reveal">
+        <span class="sp-tag">Training &amp; compliance</span>
+        <h3>PSARA-compliant training, built for real emergencies</h3>
+        <p>Every security officer is trained strictly in accordance with PSARA guidelines — covering fire-fighting, first aid, frisking procedures, and the professional conduct our clients expect.</p>
+        <ul class="sp-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Fire-fighting &amp; emergency response drills</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> First aid &amp; life-saving skills</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Code of conduct, grooming &amp; discipline</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5a9e2f" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg> Police-verified, background-checked personnel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why" id="why-us">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Why choose us</div>
+      <h2>Sixteen years of discipline, backed by real numbers</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="num">01</div><h4>Established &amp; trusted since 2008</h4><p>Sixteen years of consistent service with a valid PSARA license throughout.</p></div>
+      <div class="why-card reveal"><div class="num">02</div><h4>2,135+ disciplined personnel</h4><p>Well-trained, uniformed and continuously upskilled through refresher programs.</p></div>
+      <div class="why-card reveal"><div class="num">03</div><h4>Trusted by 100+ organizations</h4><p>Across corporate, residential, commercial and industrial sectors.</p></div>
+      <div class="why-card reveal"><div class="num">04</div><h4>Strict SOP adherence</h4><p>Every site operates under documented standard operating procedures and audits.</p></div>
+      <div class="why-card reveal"><div class="num">05</div><h4>24/7 control room + QRT</h4><p>Immediate emergency handling backed by a dedicated Quick Response Team.</p></div>
+      <div class="why-card reveal"><div class="num">06</div><h4>Ex-forces operations leadership</h4><p>Led by ex-Army, ex-Navy and ex-CRPF professionals with decades of discipline.</p></div>
+      <div class="why-card reveal"><div class="num">07</div><h4>Timely salary payments</h4><p>Stable, motivated staff with low attrition and long-term loyalty.</p></div>
+      <div class="why-card reveal"><div class="num">08</div><h4>Customized solutions</h4><p>Services tailored to your site, budget and specific risk profile.</p></div>
+      <div class="why-card reveal"><div class="num">09</div><h4>Social responsibility</h4><p>Active support for underserved communities and animal welfare initiatives.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEADERSHIP ===== -->
+<section class="leadership" id="leadership">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow" style="background:rgba(47,143,176,0.1);color:var(--teal);">Leadership team</div>
+      <h2>Decades of ground-level command experience</h2>
+      <p>Our operations are led by professionals who have served in the Indian Army, Merchant Navy and CRPF — bringing discipline from the field into every client engagement.</p>
+    </div>
+    <div class="lead-grid">
+      <div class="lead-card reveal">
+        <div class="lead-avatar">MN</div>
+        <h4>Mahadeo Vasu Naik</h4>
+        <span class="role">Managing Director</span>
+        <p>Began his career as a security guard and built the organization from the ground up over 35 years, with discipline, integrity and commitment to service excellence.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-avatar">SN</div>
+        <h4>Suraj Naik</h4>
+        <span class="role">Director &middot; Ex-Merchant Navy</span>
+        <p>Brings global operational exposure, safety standards and leadership discipline gained through years of service in the Merchant Navy.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-avatar">PN</div>
+        <h4>Prakash Naik</h4>
+        <span class="role">Director &middot; MBA, IT</span>
+        <p>Responsible for strategic planning, systems integration, compliance and modern operational processes.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-avatar">CV</div>
+        <h4>Capt. Varkey M.V.</h4>
+        <span class="role">Operations Manager &middot; Ex-Indian Army</span>
+        <p>38 years of service overseeing field operations, training, audits and strict compliance with security protocols.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-avatar">AG</div>
+        <h4>Subedar Major Arun Kumar Gupta</h4>
+        <span class="role">Senior Security Manager &middot; Ex-Indian Army</span>
+        <p>30 years of service leading multi-site security operations with strong discipline, vigilance and operational excellence.</p>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-avatar">BT</div>
+        <h4>ASI Baburao Tengle</h4>
+        <span class="role">Training Head &middot; Ex-CRPF</span>
+        <p>25 years of law-enforcement experience leading training programs in drills, emergency response, grooming and soft skills.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Client trust</div>
+      <h2>Trusted by 100+ organizations across Maharashtra</h2>
+      <p>A selection of the residential, corporate and institutional clients we serve.</p>
+    </div>
+    <div class="client-chip-row reveal">
+      <span class="client-chip">MSC Bank</span>
+      <span class="client-chip">Lodha</span>
+      <span class="client-chip">Godrej</span>
+      <span class="client-chip">Kalpataru</span>
+      <span class="client-chip">BramhaCorp</span>
+      <span class="client-chip">Nyati Group</span>
+      <span class="client-chip">Queenstown Chinchwad</span>
+      <span class="client-chip">Kolte-Patil Life Republic</span>
+      <span class="client-chip">Suratwwala</span>
+      <span class="client-chip">CIDCO</span>
+      <span class="client-chip">Girisons Group</span>
+      <span class="client-chip">Rama Group</span>
+      <span class="client-chip">Divyasparsh Group</span>
+      <span class="client-chip">EDS Technologies</span>
+      <span class="client-chip">Infinity Technology</span>
+      <span class="client-chip">Essem Industries</span>
+      <span class="client-chip">ASV Engineering</span>
+      <span class="client-chip">IZAR Cutting Tools</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<div class="cta-band">
+  <div class="container">
+    <div>
+      <h3>Ready for a safer, cleaner facility?</h3>
+      <p>Talk to our team about a customized security and housekeeping plan for your site.</p>
+    </div>
+    <a href="#contact" class="btn btn-navy">Request a proposal</a>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Let's discuss your facility's needs</h2>
+      <p>Share a few details and our team will get back to you with a customized proposal within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card reveal">
+        <h3>Head office</h3>
+        <p>Pooja Facility Management Services Pvt Ltd</p>
+
+        <div class="contact-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><strong>Address</strong><span>MPJ Chamber, Office No. 205, Near Vodafone Showroom, Wakdewadi, Pune, MH 411005</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><strong>Phone</strong><a href="tel:+918888851519">88888 51519</a> &nbsp;/&nbsp; <a href="tel:+919527040302">95270 40302</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+          <div><strong>Email</strong><a href="mailto:pooja.servises@gmail.com">pooja.servises@gmail.com</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg></div>
+          <div><strong>Website</strong><span>www.poojafacility.com</span></div>
+        </div>
+
+        <div class="cert-row">
+          <span>PSARA SR.NO. 11/2012</span>
+          <span>ISO 9001:2015</span>
+          <span>GSTIN 27AAICP3658C1ZD</span>
+          <span>CIN U74999PN2015PTC156942</span>
+        </div>
+      </div>
+
+      <form id="quoteForm" class="reveal">
+        <input type="hidden" name="_subject" value="New enquiry from poojafacility website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="Full name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company / society name</label>
+            <input type="text" id="company" name="Company / society" placeholder="Organization name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="Phone" placeholder="+91 98765 43210" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="Email" placeholder="you@company.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="service">Service required</label>
+            <select id="service" name="Service required">
+              <option>Security services</option>
+              <option>Housekeeping</option>
+              <option>Bouncer services</option>
+              <option>Facility management</option>
+              <option>Waste management &amp; OWC</option>
+              <option>Electrician / plumber / gardener</option>
+              <option>Multiple services</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="message">Tell us about your site</label>
+            <textarea id="message" name="Message" placeholder="Location, size, number of shifts, current challenges..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send request</button>
+        <p class="form-note">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
+        <p id="formStatus">Thank you — your request has been noted. Our team will call you back shortly.</p>
+        <p id="formError" style="display:none;margin-top:14px;font-size:14px;font-weight:600;color:#c0392b;">Something went wrong sending your request — please call or WhatsApp us directly using the details alongside.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Pooja Facility Management Services logo">
+        <p>PSARA-licensed, ISO 9001:2015 certified security, housekeeping and facility management partner — serving Pune and Maharashtra since 2008.</p>
+        <div class="socials" style="margin-top:20px;">
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3v-12zM9 8.98h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1v6.32h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97v5.7H9v-12z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Security services</a></li>
+          <li><a href="#services">Housekeeping</a></li>
+          <li><a href="#services">Bouncer services</a></li>
+          <li><a href="#services">Facility management</a></li>
+          <li><a href="#services">Waste management</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#why-us">Why choose us</a></li>
+          <li><a href="#sectors">Sectors served</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>MPJ Chamber, Office 205, Wakdewadi, Pune 411005</li>
+          <li><a href="tel:+918888851519">88888 51519</a></li>
+          <li><a href="mailto:pooja.servises@gmail.com">pooja.servises@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Pooja Facility Management Services Pvt Ltd. All rights reserved.</span>
+      <span>PSARA SR.NO. 11/2012 &nbsp;|&nbsp; CIN U74999PN2015PTC156942</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-cta">
+  <a href="https://wa.me/918888851519" class="float-btn wa" aria-label="WhatsApp us" target="_blank" rel="noopener">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.9-.4-1.9-1-2.7-1.9-.7-.7-1.2-1.5-1.5-2.1-.1-.3 0-.4.1-.6.2-.2.4-.5.6-.7.2-.2.2-.4.1-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1 0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3.1.6.4-.1 1.4-.6 1.6-1.1.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 00-8.5 15.2L2 22l5-1.4A10 10 0 1012 2z"/></svg>
+  </a>
+  <a href="tel:+918888851519" class="float-btn call" aria-label="Call us">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+</div>
+
+<script>
+  // header scroll state
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('menuOverlay');
+  function closeMenu(){ mobileMenu.classList.remove('open'); overlay.classList.remove('open'); }
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.add('open'); overlay.classList.add('open');
+  });
+  overlay.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // animated counters
+  const counters = document.querySelectorAll('[data-count]');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1200;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min((now - start) / duration, 1);
+        el.textContent = Math.floor(p * target) + (p === 1 ? suffix : '');
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(el => counterIO.observe(el));
+
+  // contact form — delivered via FormSubmit.co (no backend required, works on static hosting)
+  // First submission triggers a one-time confirmation email to pooja.servises@gmail.com — click it to activate delivery.
+  const form = document.getElementById('quoteForm');
+  const status = document.getElementById('formStatus');
+  const formError = document.getElementById('formError');
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/pooja.servises@gmail.com';
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.classList.remove('show');
+    formError.style.display = 'none';
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then((res) => { if (!res.ok) throw new Error('Request failed'); return res.json(); })
+      .then(() => {
+        status.classList.add('show');
+        form.reset();
+      })
+      .catch(() => {
+        formError.style.display = 'block';
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send request';
+      });
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
