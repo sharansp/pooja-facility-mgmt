@@ -74,7 +74,11 @@
   header.scrolled{background:rgba(13,38,71,0.97);box-shadow:0 6px 24px rgba(0,0,0,0.18);padding:10px 0;backdrop-filter:blur(6px);}
   .nav-wrap{display:flex;align-items:center;justify-content:space-between;}
   .brand{display:flex;align-items:center;gap:10px;}
-  .brand img{height:40px;width:auto;filter:brightness(0) invert(1);}
+  .logo-badge{
+    background:#fff;border-radius:11px;padding:6px;display:inline-flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.18);flex-shrink:0;
+  }
+  .logo-badge img{height:30px;width:auto;display:block;}
   .brand-text{color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;line-height:1.2;}
   .brand-text span{display:block;font-weight:400;font-size:10.5px;letter-spacing:0.04em;opacity:0.75;text-transform:uppercase;}
   nav ul{display:flex;gap:34px;}
@@ -277,7 +281,8 @@
   /* ===== FOOTER ===== */
   footer{background:var(--navy-3);color:rgba(255,255,255,0.7);padding:64px 0 26px;}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:40px;margin-bottom:48px;}
-  .footer-brand img{height:38px;filter:brightness(0) invert(1);margin-bottom:16px;}
+  .footer-brand .logo-badge{margin-bottom:18px;}
+  .footer-brand .logo-badge img{height:34px;}
   .footer-brand p{font-size:13.5px;line-height:1.7;max-width:280px;}
   footer h4{color:#fff;font-size:14.5px;margin-bottom:18px;font-family:'Poppins',sans-serif;}
   footer ul li{margin-bottom:11px;font-size:13.8px;}
@@ -333,7 +338,7 @@
 <header id="siteHeader">
   <div class="container nav-wrap">
     <a href="#home" class="brand">
-      <img src="assets/logo.png" alt="Pooja Facility Management Services logo">
+      <span class="logo-badge"><img src="assets/logo-icon.png" alt="Pooja Facility Management Services logo"></span>
       <div class="brand-text">POOJA FMS<span>Facility Management Services</span></div>
     </a>
     <nav>
@@ -784,7 +789,8 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Pooja Facility Management Services logo">
+        <span class="logo-badge"><img src="assets/logo-icon.png" alt="Pooja Facility Management Services logo"></span>
+        <p style="color:#fff;font-weight:600;font-family:'Poppins',sans-serif;margin-bottom:6px;">Pooja Facility Management Services</p>
         <p>PSARA-licensed, ISO 9001:2015 certified security, housekeeping and facility management partner — serving Pune and Maharashtra since 2008.</p>
         <div class="socials" style="margin-top:20px;">
           <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
