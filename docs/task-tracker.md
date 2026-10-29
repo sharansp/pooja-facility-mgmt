@@ -19,19 +19,19 @@
 
 | Task | Status | Notes |
 |---|---|---|
-| `services.html` | ⬜ Todo | |
-| `about.html` | ⬜ Todo | |
-| `industries.html` | ⬜ Todo | |
-| `contact.html` | ⬜ Todo | |
-| `faq.html` | ⬜ Todo | |
+| `services.html` | ✅ Done | 8 service cards with benefits and enquire CTA |
+| `about.html` | ✅ Done | Story, mission/vision, values, leadership, certifications |
+| `industries.html` | ✅ Done | 9 sector cards with relevant service bullets |
+| `contact.html` | ✅ Done | Full form with validation, office info, WhatsApp link |
+| `faq.html` | ✅ Done | 9-item accordion FAQ + CTA |
 
 ## Phase 3 — Navigation wiring
 
 | Task | Status | Notes |
 |---|---|---|
-| Update `index.html` nav to multi-page links | ⬜ Todo | |
-| Active nav state on each page | ⬜ Todo | |
-| Footer links updated across all pages | ⬜ Todo | |
+| Update `index.html` nav to multi-page links | ✅ Done | |
+| Active nav state on each page | ✅ Done | `aria-current="page"` + green underline |
+| Footer links updated across all pages | ✅ Done | Consistent across all 6 pages |
 
 ## Phase 4 — SEO and performance
 
